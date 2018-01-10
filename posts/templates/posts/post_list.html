@@ -9,10 +9,9 @@
     {% for post in object_list %}
     <tr>
       {% video post.video as video %}
+        <td>{{ post.pub_date_pretty }} </td>
       <td>{{ post.description }} </td>
-      <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></td>
-
-        <td><img src="{{ video.thumbnail }}" width=120 height=90 class="img-rounded"></td>
+      <td><a href="{{ post.get_absolute_url }}"><img src="{{ video.thumbnail }}" width=120 height=90 class="img-rounded"></a></td>
       {% endvideo %}
     </tr>
 
