@@ -6,7 +6,7 @@ from embed_video.fields import EmbedVideoField
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    description = models.CharField(max_length=300)
+    description = models.TextField(max_length=3000)
     pub_date = models.DateTimeField()
     video = EmbedVideoField(verbose_name='My video',
                             help_text='This is a help text')
