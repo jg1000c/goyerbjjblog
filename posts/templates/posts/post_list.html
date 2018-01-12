@@ -4,13 +4,15 @@
 
 {% block content %}
 
+
+
 <h1>BJJ Journal Posts</h1>
   <table class="table">
     {% for post in object_list %}
     <tr>
       {% video post.video as video %}
-        <td>{{ post.pub_date_pretty }} </td>
-      <td>{{ post.description }} </td>
+        <td><font size="4"><pre>{{ post.pub_date_pretty }}</pre> </font> </td>
+      <td class="detail"><font size="4">{{ post.description }} </font></td>
       <td><a href="{{ post.get_absolute_url }}"><img src="{{ video.thumbnail }}" width=240 height=180 class="img-rounded"></a></td>
       {% endvideo %}
     </tr>
