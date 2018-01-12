@@ -9,7 +9,7 @@
     {% for lucas in object_list %}
     <tr>
       {% video lucas.video as video %}
-        <td> <pre>{{ lucas.title }}</pre> 
+        <td> <pre>{{ lucas.title }}</pre>
       {{ lucas.description }} </td>
       <td><a href="{{ lucas.get_absolute_url }}"><img src="{{ video.thumbnail }}" width=240 height=190 class="img-rounded"></a></td>
       {% endvideo %}
